@@ -1,14 +1,9 @@
 with open("Arsenal.txt","r") as teams:
-    temp = []
-    for x in range(5):
-        if x == 0:
-            teams.readline()
-        else:
-            temp.append(teams.readline())
+    temp = teams.readlines()
 
 with open("Arsenal.txt","w") as teams:
     teams.write("This is a new line \n")
-    for x in range(len(temp)):
+    for x in range(1,len(temp)):
         teams.write(temp[x])
 
 
